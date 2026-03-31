@@ -2,19 +2,19 @@ const steps = [
   {
     num: "01",
     title: "Auditoria de requerimientos",
-    body: "Exhaustive diagnostic phase analyzing current infrastructure and identifying critical voids.",
+    body: "Nos reunimos para entender tu negocio, tus objetivos y el problema que necesitás resolver antes de proponer cualquier solución.",
     active: true,
   },
   {
     num: "02",
-    title: "Propuesta y arquitectura",
-    body: "Defining the logic structure and visual schema for a high-performance solution.",
+    title: "Propuesta Y DISEÑO",
+    body: "Definimos cómo se va a construir la solución antes de escribir una línea de código. Prototipo incluido para validar antes de invertir.",
     active: false,
   },
   {
     num: "03",
-    title: "QA & Testing",
-    body: "Concurrent engineering sprints using the SOS standard for rapid, stable development cycles.",
+    title: "DESARROLLO Y REVISIÓN",
+    body: "Cada línea de código que sale a producción pasó por tu revisión, testing y aprobación. Eso es lo que garantiza la calidad final.",
     active: false,
   },
   {
@@ -29,10 +29,10 @@ export default function WorkMethodology() {
   return (
     <section className="py-40 px-12 bg-background relative overflow-hidden">
       <div className="absolute inset-0 dashboard-grid opacity-10"></div>
-      <div className="max-w-[1600px] mx-auto relative z-10">
+      <div className="max-w-400 mx-auto relative z-10">
         <div className="mb-32">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-4 block">
-            DEVELOPMENT PIPELINE
+            DE LA IDEA AL PRODUCTO
           </span>
           <h2 className="font-headline font-extrabold text-5xl md:text-6xl tracking-tight uppercase text-white">
             cómo trabajamos<span className="text-primary">.</span>
@@ -52,10 +52,10 @@ export default function WorkMethodology() {
               >
                 {num}
               </div>
-              <h5 className="font-headline font-bold mb-4 uppercase tracking-[0.2em] text-white">
+              <h5 className="font-headline font-bold text-xl mb-4 uppercase tracking-[0.2em] text-white">
                 {title}
               </h5>
-              <p className="text-xs text-zinc-500 leading-relaxed max-w-[240px] font-light">
+              <p className="text-xs 2xl:text-sm text-zinc-500 leading-relaxed max-w-60 font-light">
                 {body}
               </p>
             </div>

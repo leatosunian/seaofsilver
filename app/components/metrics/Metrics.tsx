@@ -1,8 +1,8 @@
 const metrics = [
-  { value: "100", suffix: "+", label: "Operations Delivered", live: true },
-  { value: "50", suffix: "+", label: "Core Engineers", live: false },
-  { value: "98", suffix: "%", label: "Retention Metric", live: false },
-  { value: "24/7", suffix: "", label: "Uptime Support", live: false },
+  { value: "23", suffix: "+", label: "PROYECTOS COMPLETADOS", live: true },
+  { value: "2", suffix: "+", label: "AÑOS CREANDO SOLUCIONES", live: false },
+  { value: "98", suffix: "%", label: "INDICE DE SATISFACCIÓN", live: false },
+  { value: "24", suffix: "HS", label: "SOPORTE POST ENTREGA", live: false },
 ];
 
 export default function Metrics() {
@@ -12,10 +12,10 @@ export default function Metrics() {
       <div className="max-w-[1600px] mx-auto">
         <div className="text-center mb-24">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-4 block">
-            LIVE SYSTEM STATUS
+            NUESTRO IMPACTO
           </span>
           <h2 className="font-headline font-extrabold text-5xl tracking-tighter uppercase text-white">
-            Proven Impact
+            ÉSTO ES LO QUE CONSTRUIMOS <span className="text-primary">.</span>
           </h2>
         </div>
 

@@ -12,7 +12,7 @@ npm run lint     # Run ESLint
 
 ## Architecture
 
-Single-page marketing site for **SOS Technology** — a Next.js 16 + React 19 + Tailwind CSS v4 app. The entire page is assembled in `app/page.tsx` as a sequence of section components from `app/components/`.
+Single-page marketing site for **Sea Of Silver Software Factory / SOS** — a Next.js 16 + React 19 + Tailwind CSS v4 app. The entire page is assembled in `app/page.tsx` as a sequence of section components from `app/components/`.
 
 **Sections (in order):** Navbar → Hero → ClientLogos → WhyUs → Services → WorkMethodology → Portfolio → Testimonial → Metrics → Contact → Footer
 

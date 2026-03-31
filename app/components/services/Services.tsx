@@ -1,46 +1,46 @@
 const services = [
   {
     num: "01",
-    title: "Custom Software",
-    body: "Tailored enterprise platforms engineered for specific operational voids and high-stakes performance.",
+    title: "SOFTWARE A MEDIDA",
+    body: "Software escalable diseñado alrededor de tus procesos, tu equipo y tus clientes. El resultado es un sistema que realmente se usa.",
   },
   {
     num: "02",
-    title: "System Dev",
-    body: "High-performance mobile and web ecosystems designed for elite user experience and zero friction.",
+    title: "WEB · iOS · ANDROID",
+    body: " Webs, landing pages, apps iOS y Android. Todo construido con el stack correcto, optimizado para velocidad y escalabilidad.",
   },
   {
     num: "03",
-    title: "UX Architecture",
-    body: "Minimalist interfaces designed for power users and global brands requiring extreme clarity.",
+    title: "DISEÑO DE PRODUCTO",
+    body: "Transformamos requerimientos complejos en interfaces simples, funcionales y estéticas.",
   },
   {
     num: "04",
-    title: "Industrial QA",
-    body: "Automated testing protocols and verification cycles that guarantee zero-defect mission critical software.",
+    title: "TESTING & QA",
+    body: "Garantizamos el funcionamiento óptimo de tus sistemas con pruebas rigurosas que aseguran calidad, rendimiento y seguridad.",
   },
   {
     num: "05",
-    title: "Core DevOps",
-    body: "Distributed cloud infrastructure that scales autonomously and repairs its own logic paths.",
+    title: "CIBERSEGURIDAD",
+    body: "Auditamos tu infraestructura, tus APIs y tu código para detectar puntos débiles antes de que se conviertan en incidentes.",
   },
   {
     num: "06",
-    title: "Machine Intelligence",
-    body: "Embedding bespoke neural models into existing pipelines for predictive advantage and automation.",
+    title: "IA Y AUTOMATIZACIONES",
+    body: "Cada hora que tu equipo dedica a tareas repetitivas es una hora que no dedica a crecer. La automatizamos.",
   },
 ];
 
 export default function Services() {
   return (
     <section className="py-40 px-12 bg-zinc-950/50 border-y border-white/5">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-400 mx-auto">
         <div className="mb-32 text-center">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-6 block">
-            EXPERT CAPABILITIES
+            DESARROLLO · DISEÑO · MARKETING
           </span>
           <h2 className="font-headline font-extrabold text-6xl md:text-7xl tracking-tighter uppercase text-white mb-8">
-            nuestros servicios
+            NUESTRAS SOLUCIONES
           </h2>
           <div className="h-px w-24 bg-primary mx-auto"></div>
         </div>
@@ -54,7 +54,7 @@ export default function Services() {
               <div className="absolute top-0 right-0 p-8 text-white/5 text-6xl font-black italic">
                 {num}
               </div>
-              <h4 className="font-headline font-bold text-xl mb-6 uppercase tracking-widest text-white group-hover:text-primary transition-colors">
+              <h4 className="font-headline font-bold text-2xl mb-6 uppercase tracking-widest text-white group-hover:text-primary transition-colors">
                 {title}
               </h4>
               <p className="text-zinc-500 text-sm leading-relaxed font-light mb-12">

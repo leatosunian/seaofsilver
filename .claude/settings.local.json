@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx:*)"
+      "Bash(npx:*)",
+      "Bash(mv Navbar/index.tsx Navbar/Navbar.tsx)",
+      "Bash(mv Hero/index.tsx Hero/Hero.tsx)",
+      "Bash(mv ClientLogos/index.tsx ClientLogos/ClientLogos.tsx)",
+      "Bash(mv WhyUs/index.tsx WhyUs/WhyUs.tsx)",
+      "Bash(mv Services/index.tsx Services/Services.tsx)",
+      "Bash(mv Navbar navbar_tmp)",
+      "Bash(mv navbar_tmp navbar)",
+      "Bash(mv Hero hero_tmp)",
+      "Bash(mv hero_tmp hero)",
+      "Bash(mv ClientLogos clientlogos_tmp)"
     ]
   }
 }

@@ -5,14 +5,14 @@ export default function Contact() {
         {/* Left */}
         <div className="lg:col-span-5">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-8 block">
-            CONTACT HUB
+            TRABAJEMOS JUNTOS
           </span>
-          <h2 className="font-headline font-extrabold text-6xl md:text-8xl tracking-tighter uppercase mb-12 text-white">
-            Initiate <br /> Project<span className="text-primary">.</span>
+          <h2 className="font-headline font-extrabold text-6xl 2xl:text-7xl tracking-tighter uppercase mb-12 text-white">
+            HABLEMOS DE
+            TU PROYECTO<span className="text-primary">.</span>
           </h2>
           <p className="text-zinc-500 text-xl mb-16 leading-relaxed font-light">
-            Ready to construct the future? Our technical leads are standing by
-            to audit your mission requirements.
+            Comencemos a desarrollar la solucion que tu empresa necesita. Envíanos un mensaje con los detalles de tu proyecto y nos pondremos en contacto para llevar tu negocio a otro nivel.
           </p>
           <div className="space-y-10">
             <div className="flex items-center gap-6">

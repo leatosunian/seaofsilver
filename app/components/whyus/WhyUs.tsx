@@ -11,13 +11,13 @@ const pillars = [
   },
   {
     icon: "hub",
-    title: "Intelligence",
-    body: "Integrating advanced neural networks directly into core business logic.",
+     title: "IA y automatización",
+    body: "Desde chatbots hasta análisis predictivo,adaptamos la IA al contexto de tu empresa.",
   },
   {
     icon: "trending_up",
-    title: "Infinite Scale",
-    body: "Architecture designed to expand fluidly with global market demands.",
+    title: "Arquitectura escalable",
+    body: "Diseñamos la arquitectura pensando en diez veces tu volumen actual desde el día uno.",
   },
 ];
 
