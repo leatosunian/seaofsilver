@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section className="py-40 px-12 bg-background">
-      <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24">
+      <div className="max-w-400 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24">
         {/* Left */}
         <div className="lg:col-span-5">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-8 block">

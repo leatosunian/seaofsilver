@@ -9,7 +9,7 @@ export default function Metrics() {
   return (
     <section className="py-32 px-12 border-y border-white/5 bg-zinc-950/80 relative overflow-hidden">
       <div className="absolute inset-0 dashboard-grid opacity-5"></div>
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-400 mx-auto">
         <div className="text-center mb-24">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-4 block">
             NUESTRO IMPACTO

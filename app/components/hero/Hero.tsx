@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <header className="relative pt-32 pb-24 px-12 min-h-screen flex items-center overflow-hidden bg-[#050505]">
+    <header className="relative pt-32 pb-24 px-12 min-h-screen flex items-center overflow-hidden bg-background">
       {/* Technical Background */}
       <div className="absolute inset-0 hero-pattern opacity-20"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(142,255,113,0.07),transparent_70%)]"></div>
@@ -24,7 +24,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="max-w-[1600px] mx-auto w-full relative z-10">
+      <div className="max-w-400 mx-auto w-full relative z-10">
         <div className="max-w-4xl">
           {/* Status */}
           <div className="flex items-center gap-4 mb-10">
