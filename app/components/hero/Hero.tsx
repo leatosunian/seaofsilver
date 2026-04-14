@@ -1,13 +1,20 @@
+import { FaArrowRight } from "react-icons/fa6";
+import { GlobeBackground } from "../globe";
+import { Button } from "../ui/button";
+
 export default function Hero() {
   return (
-    <header className="relative pt-32 pb-24 px-12 min-h-screen flex items-center overflow-hidden bg-background">
+    <header className="relative pt-32 pb-24 px-4 md:px-16 2xl:px-64 min-h-screen flex items-center overflow-hidden bg-background">
+      {/* 3D Globe — full-screen, behind everything */}
+      <GlobeBackground />
+
       {/* Technical Background */}
       <div className="absolute inset-0 hero-pattern opacity-20"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(142,255,113,0.07),transparent_70%)]"></div>
       <div className="absolute inset-0 scanline h-1/2 w-full opacity-30"></div>
 
       {/* Abstract Geometric SVG */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full opacity-10 pointer-events-none overflow-hidden hidden lg:block">
+      {/* <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full opacity-10 pointer-events-none overflow-hidden hidden lg:block">
         <svg
           className="w-full h-full fill-none stroke-[0.5]"
           viewBox="0 0 800 800"
@@ -22,10 +29,10 @@ export default function Hero() {
           <rect x="350" y="350" width="100" height="100" />
           <path strokeWidth="0.2" d="M0,400 L800,400 M400,0 L400,800" />
         </svg>
-      </div>
+      </div> */}
 
       <div className="max-w-400 mx-auto w-full relative z-10">
-        <div className="max-w-4xl">
+        <div className="max-w-6xl">
           {/* Status */}
           <div className="flex items-center gap-4 mb-10 ">
             <div className="h-px w-12 bg-primary"></div>
@@ -41,44 +48,24 @@ export default function Hero() {
           </h1>
 
           {/* Sub */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16">
-            <p className="text-zinc-500 text-lg md:text-xl font-light leading-relaxed">
+          <div className="mb-16">
+            <p className="text-zinc-300 text-lg md:text-xl font-light leading-relaxed">
               Software a medida, aplicaciones móviles, IA, marketing digital
               y ciberseguridad. Todo lo que tu empresa necesita para
               escalar, en un solo lugar.
             </p>
-            <div className="hidden md:flex flex-col gap-3 border-l border-white/10 pl-8 font-mono text-[10px] text-zinc-600 tracking-wider">
-              <div className="flex justify-between">
-                <span>DEV</span>
-                <span className="text-primary">FRONTEND + BACKEND + MOBILE</span>
-              </div>
-              <div className="flex justify-between">
-                <span>AUTOMATIZACIÓN</span>
-                <span className="text-white">IA + WORKFLOWS + BOTS</span>
-              </div>
-              <div className="flex justify-between">
-                <span>SEGURIDAD</span>
-                <span className="text-white">AUDITORÍA + PENTESTING</span>
-              </div>
-              <div className="flex justify-between">
-                <span>MARKETING</span>
-                <span className="text-primary">SEO + ADS + CONTENIDO</span>
-              </div>
-            </div>
+
           </div>
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-8 items-center">
-            <button className="relative group bg-primary text-black px-12 py-5 font-headline font-bold text-xs uppercase tracking-widest hover:bg-white transition-all overflow-hidden">
-              <span className="relative z-10">Contanos tu proyecto</span>
-              <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-            </button>
-            <button className="group flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors">
+            <Button className="group p-5.5 hover:bg-primary/75 bg-primary rounded-sm font-medium text-base">
+              Contanos tu proyecto
+              <FaArrowRight className="ml-2 transition-transform duration-200 group-hover:translate-x-1" />
+            </Button>
+            <Button className="p-5.5 hover:bg-primary/75 hover:text-black text-white border-none bg-primary/10 backdrop-blur-2xl rounded-sm font-medium text-base">
               Nuestros servicios
-              <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">
-                east
-              </span>
-            </button>
+            </Button>
           </div>
         </div>
       </div>

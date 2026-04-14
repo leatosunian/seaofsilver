@@ -12,7 +12,9 @@
       "Bash(mv Hero hero_tmp)",
       "Bash(mv hero_tmp hero)",
       "Bash(mv ClientLogos clientlogos_tmp)",
-      "Bash(find \"d:/projects/seaofsilver/node_modules/shadcn\" -name \"*.css\" -exec grep -l \"color-primary\\\\|--primary\" {} \\\\;)"
+      "Bash(find \"d:/projects/seaofsilver/node_modules/shadcn\" -name \"*.css\" -exec grep -l \"color-primary\\\\|--primary\" {} \\\\;)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)"
     ]
   }
 }

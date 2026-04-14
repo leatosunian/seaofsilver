@@ -26,13 +26,13 @@ const navServices = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-white/5">
-      <div className="flex justify-between items-center px-12 py-6 max-w-400 mx-auto">
+    <nav className="fixed top-0 w-full z-50">
+      <div className="flex justify-between items-center px-12 py-4 max-w-400 mx-auto">
 
         {/* LOGO */}
         <div className="flex items-center justify-center gap-3 text-xl font-extrabold tracking-[0.2em] text-white uppercase font-headline">
-          <Image src={logo} alt="SOS.TECH" className="h-10 w-10" />
-          <span className="text-sm tracking-wide">SEA OF SILVER</span>
+          <Image src={logo} alt="SOS.TECH" className="" width={55} height={55} />
+          {/* <span className="text-sm tracking-wide">SEA OF SILVER</span> */}
         </div>
 
         {/* NAV LINKS */}
@@ -54,7 +54,7 @@ export default function Navbar() {
                   font-label …         → match surrounding nav link typography
                   rounded-none         → no radius (design system rule)
                 */}
-                <NavigationMenuTrigger className="h-auto p-0 rounded-none bg-transparent hover:bg-transparent focus:bg-transparent data-open:bg-transparent data-popup-open:bg-transparent data-open:hover:bg-transparent data-popup-open:hover:bg-transparent data-open:focus:bg-transparent text-primary font-label text-[11px] uppercase tracking-[0.3em] font-medium shadow-none">
+                <NavigationMenuTrigger className="h-auto p-0 rounded-none bg-transparent hover:bg-transparent focus:bg-transparent data-open:bg-transparent data-popup-open:bg-transparent data-open:hover:bg-transparent data-popup-open:hover:bg-transparent data-open:focus:bg-transparent text-white hover:text-primary font-label text-[11px] uppercase tracking-[0.3em] font-medium shadow-none">
                   Servicios
                 </NavigationMenuTrigger>
 
@@ -103,20 +103,20 @@ export default function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <a href="#" className="text-zinc-500 hover:text-white transition-colors">
+          <a href="#" className="text-white hover:text-primary transition-colors">
             Portfolio
           </a>
-          <a href="#" className="text-zinc-500 hover:text-white transition-colors">
+          <a href="#" className="text-white hover:text-primary transition-colors">
             nosotros
           </a>
-          <a href="#" className="text-zinc-500 hover:text-white transition-colors">
+          <a href="#" className="text-white hover:text-primary transition-colors">
             Contacto
           </a>
         </div>
 
         {/* CTA BUTTON */}
         <Link href="/contact">
-          <Button className="border bg-primary-fixed border-white/10 px-5 py-4 text-[11px] uppercase tracking-wider font-bold hover:bg-white text-black transition-all duration-300">
+          <Button className="border bg-primary-fixed rounded-sm border-white/10 px-5 py-4 text-[11px] uppercase tracking-wider font-bold hover:bg-white text-black transition-all duration-300">
             Solicitar presupuesto
           </Button>
         </Link>
