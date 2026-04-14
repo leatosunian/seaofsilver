@@ -1,3 +1,5 @@
+import { Button } from "../ui/button";
+
 const services = [
   {
     num: "01",
@@ -6,13 +8,13 @@ const services = [
   },
   {
     num: "02",
-    title: "WEB · iOS · ANDROID",
-    body: " Webs, landing pages, apps iOS y Android. Todo construido con el stack correcto, optimizado para velocidad y escalabilidad.",
+    title: "iOS · ANDROID",
+    body: "Apps iOS y Android. Todo construido con el stack correcto, optimizado para velocidad y escalabilidad.",
   },
   {
     num: "03",
-    title: "DISEÑO DE PRODUCTO",
-    body: "Transformamos requerimientos complejos en interfaces simples, funcionales y estéticas.",
+    title: "LANDING PAGES",
+    body: "Páginas  optimizadas para convertir visitantes en clientes, diseñadas para maximizar la tasa de conversión.",
   },
   {
     num: "04",
@@ -51,21 +53,19 @@ export default function Services() {
               key={num}
               className="group border border-white/5 p-12 hover:border-primary/20 transition-all duration-500 relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 p-8 text-white/5 text-6xl font-black italic">
-                {num}
-              </div>
+                {/* <div className="absolute top-0 right-0 p-8 text-white/5 text-6xl font-black italic">
+                  {num}
+                </div> */}
               <h4 className="font-headline font-bold text-2xl mb-6 uppercase tracking-widest text-white group-hover:text-primary transition-colors">
                 {title}
               </h4>
               <p className="text-zinc-500 text-sm leading-relaxed font-light mb-12">
                 {body}
               </p>
-              <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-zinc-400 group-hover:text-white transition-colors">
-                Specification{" "}
-                <span className="material-symbols-outlined text-sm">
-                  arrow_outward
-                </span>
-              </div>
+              <Button className="flex text-black items-center gap-2 text-xs px-4 py-2 uppercase tracking-widest font-bold  transition-colors">
+                Conocé mas{" "}
+                  
+              </Button>
             </div>
           ))}
         </div>

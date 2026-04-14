@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="max-w-400 mx-auto w-full relative z-10">
         <div className="max-w-4xl">
           {/* Status */}
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex items-center gap-4 mb-10 ">
             <div className="h-px w-12 bg-primary"></div>
             <span className="text-primary font-label text-[10px] uppercase tracking-[0.6em] font-black">
               TECH_STATUS: OPERACIONAL / LISTOS_PARA_VOS
