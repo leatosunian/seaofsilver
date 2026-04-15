@@ -50,11 +50,9 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { label: 'portfolio', id: 'hero', number: '01' },
-    { label: 'nosotros', id: 'projects', number: '02' },
-    { label: 'contacto', id: 'tech-stack', number: '03' },
-    //{ label: 'certificates', id: 'certificates', number: '04' },
-    //{ label: 'contact', id: 'contact', number: '05' },
+    { label: 'portfolio', id: 'portfolio', number: '01' },
+    { label: 'nosotros', id: 'whyus', number: '02' },
+    { label: 'contacto', id: 'contact', number: '03' },
   ];
 
   const navServices = [

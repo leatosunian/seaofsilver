@@ -33,23 +33,23 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-40 px-12 bg-surface">
+    <section className="py-20 md:py-40 px-6 md:px-12 bg-surface">
       <div className="max-w-400 mx-auto">
-        <div className="mb-20 text-center">
+        <div className="mb-12 md:mb-20 text-left md:text-center">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-6 block">
             DESARROLLO · DISEÑO · MARKETING
           </span>
-          <h2 className="font-headline font-extrabold text-6xl md:text-7xl tracking-tighter uppercase text-white mb-8">
+          <h2 className="font-headline font-extrabold text-3xl md:text-5xl 2xl:text-6xl tracking-tighter uppercase text-white mb-8">
             NUESTRAS SOLUCIONES<span className="text-primary">.</span>
           </h2>
-          <div className="h-px w-24 bg-primary mx-auto" />
+          <div className="h-px w-24 bg-primary mx-0 md:mx-auto" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px rounded-md bg-white/5 border border-white/5 overflow-hidden">
           {services.map(({ icon, title, body }) => (
             <div
               key={title}
-              className="group relative overflow-hidden bg-surface p-12 hover:-translate-y-1 hover:bg-[#111] transition-all duration-500 cursor-pointer flex flex-col"
+              className="group relative overflow-hidden bg-surface p-7 md:p-12 hover:-translate-y-1 hover:bg-[#111] transition-all duration-500 cursor-pointer flex flex-col"
             >
               {/* Animated top accent line */}
               <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />

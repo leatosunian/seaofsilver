@@ -27,16 +27,17 @@ const steps = [
 
 export default function WorkMethodology() {
   return (
-    <section className="py-40 px-12 bg-surface relative overflow-hidden">
+    <section className="py-20 md:py-40 px-6 md:px-12 bg-surface relative overflow-hidden">
       <div className="absolute inset-0 dashboard-grid opacity-10"></div>
       <div className="max-w-400 mx-auto relative z-10">
-        <div className="mb-32">
+        <div className="mb-16 md:mb-32 md:text-center">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-4 block">
             DE LA IDEA AL PRODUCTO
           </span>
-          <h2 className="font-headline font-extrabold text-5xl md:text-6xl tracking-tight uppercase text-white">
+          <h2 className="font-headline font-extrabold text-3xl md:text-5xl 2xl:text-6xl tracking-tight uppercase text-white mb-8">
             cómo trabajamos<span className="text-primary">.</span>
           </h2>
+          <div className="h-px w-24 bg-primary mx-0 md:mx-auto" />
         </div>
 
         <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -55,7 +56,7 @@ export default function WorkMethodology() {
               <h5 className="font-headline font-bold text-xl mb-4 uppercase tracking-[0.2em] text-white">
                 {title}
               </h5>
-              <p className="text-xs 2xl:text-sm text-zinc-500 leading-relaxed max-w-60 font-light">
+              <p className="text-xs 2xl:text-sm text-zinc-500 leading-relaxed md:max-w-60 font-light">
                 {body}
               </p>
             </div>

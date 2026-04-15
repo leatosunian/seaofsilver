@@ -14,17 +14,18 @@ const labelClass = "text-[10px] font-extrabold uppercase tracking-widest text-zi
 
 export default function Contact() {
   return (
-    <section className="py-40 px-12 bg-surface">
-      <div className="max-w-400 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+    <section className="py-20 md:py-40 px-6 md:px-12 bg-surface">
+      <div className="max-w-400 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
         {/* Left — 7/12 ≈ 3/5 */}
         <div className="lg:col-span-7">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-4 block">
             TRABAJEMOS JUNTOS
           </span>
-          <h2 className="font-headline font-extrabold text-6xl 2xl:text-6xl tracking-tighter uppercase mb-12 text-white">
+          <h2 className="font-headline font-extrabold text-4xl md:text-5xl 2xl:text-6xl tracking-tighter uppercase mb-8 text-white">
             HABLEMOS DE
             TU PROYECTO<span className="text-primary">.</span>
           </h2>
+          <div className="h-px w-24 bg-primary mb-8 md:mb-12" />
           <p className="text-zinc-400 text-xl mbe-12 leading-relaxed font-light w-full">
             Comencemos a desarrollar la solucion que tu empresa necesita. Envíanos un mensaje con los detalles de tu proyecto y nos pondremos en contacto para llevar tu negocio a otro nivel.
           </p>
@@ -34,7 +35,7 @@ export default function Contact() {
               href="mailto:hello@sos-tech.io"
               className="flex items-center gap-4 p-3.5 rounded-lg bg-zinc-900/60 border border-zinc-800/60 hover:border-zinc-700 hover:bg-zinc-900 transition-all duration-200 group"
             >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500/25 to-violet-500/10 border border-indigo-500/20 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-lg bg-linear-to-br from-indigo-500/25 to-violet-500/10 border border-indigo-500/20 flex items-center justify-center shrink-0">
                 <span className="material-symbols-outlined text-indigo-400 text-[18px]">mail</span>
               </div>
               <div className="flex-1 min-w-0">
@@ -51,7 +52,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-3.5 rounded-lg bg-zinc-900/60 border border-zinc-800/60 hover:border-zinc-700 hover:bg-zinc-900 transition-all duration-200 group"
             >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-emerald-500/10 border border-primary/20 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/20 to-emerald-500/10 border border-primary/20 flex items-center justify-center shrink-0">
                 <FaWhatsapp className="text-primary text-[17px]" />
               </div>
               <div className="flex-1 min-w-0">
@@ -62,13 +63,13 @@ export default function Contact() {
             </Link>
 
             {/* WhatsApp 2 */}
-            <Link
+            {/* <Link
               href="https://api.whatsapp.com/send?phone=5492235423025"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-3.5 rounded-lg bg-zinc-900/60 border border-zinc-800/60 hover:border-zinc-700 hover:bg-zinc-900 transition-all duration-200 group"
             >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-emerald-500/10 border border-primary/20 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/20 to-emerald-500/10 border border-primary/20 flex items-center justify-center shrink-0">
                 <FaWhatsapp className="text-primary text-[17px]" />
               </div>
               <div className="flex-1 min-w-0">
@@ -76,7 +77,7 @@ export default function Contact() {
                 <span className="text-sm font-bold text-zinc-200 group-hover:text-white transition-colors duration-200 block">+54 9 223 542-3025</span>
               </div>
               <FaArrowRight className="text-zinc-700 text-xs group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-200 shrink-0" />
-            </Link>
+            </Link> */}
 
             {/* Instagram */}
             <Link
@@ -85,7 +86,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-3.5 rounded-lg bg-zinc-900/60 border border-zinc-800/60 hover:border-zinc-700 hover:bg-zinc-900 transition-all duration-200 group"
             >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500/25 to-purple-500/10 border border-pink-500/20 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-lg bg-linear-to-br from-pink-500/25 to-purple-500/10 border border-pink-500/20 flex items-center justify-center shrink-0">
                 <FaInstagram className="text-pink-400 text-[17px]" />
               </div>
               <div className="flex-1 min-w-0">
@@ -121,7 +122,7 @@ export default function Contact() {
               </CardTitle>
               <div className="w-8 h-px bg-primary" />
             </div>
-            <CardDescription className="text-zinc-600 text-sm leading-relaxed">
+            <CardDescription className="text-zinc-500 text-base leading-relaxed">
               Completá el formulario y te respondemos a la brevedad.
             </CardDescription>
           </CardHeader>

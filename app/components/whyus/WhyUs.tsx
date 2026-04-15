@@ -23,16 +23,17 @@ const pillars = [
 
 export default function WhyUs() {
   return (
-    <section className="py-40 px-12 bg-surface">
+    <section className="py-20 md:py-40 px-6 md:px-12 bg-surface">
       <div className="max-w-400 mx-auto">
-        <div className="mb-24 flex items-end justify-between">
+        <div className="mb-12 md:mb-24 flex items-end justify-between">
           <div>
             <span className="text-primary font-label text-[10px] uppercase tracking-[0.4em] font-extrabold mb-4 block">
               NUESTRO ESTÁNDAR
             </span>
-            <h2 className="font-headline font-extrabold text-5xl md:text-6xl tracking-tight uppercase text-white">
+            <h2 className="font-headline font-extrabold text-3xl md:text-5xl 2xl:text-6xl tracking-tight uppercase text-white mb-8">
               Por qué Sea Of Silver<span className="text-primary">.</span>
             </h2>
+            <div className="h-px w-24 bg-primary" />
           </div>
           <p className="max-w-sm xl:max-w-lg hidden md:block border-l-2 border-primary/30 pl-5 leading-relaxed">
             <span className="block text-zinc-200 font-light text-base xl:text-lg mb-1">
@@ -48,7 +49,7 @@ export default function WhyUs() {
           {pillars.map(({ icon, title, body }, i) => (
             <div
               key={title}
-              className="relative p-10 bg-background group hover:bg-zinc-900/60 transition-all duration-300 shadow-[inset_0_2px_0_0_rgba(142,255,113,0)] hover:shadow-[inset_0_2px_0_0_rgba(142,255,113,0.35)] flex flex-col overflow-hidden"
+              className="relative p-6 md:p-10 bg-background group hover:bg-zinc-900/60 transition-all duration-300 shadow-[inset_0_2px_0_0_rgba(142,255,113,0)] hover:shadow-[inset_0_2px_0_0_rgba(142,255,113,0.35)] flex flex-col overflow-hidden"
             >
               {/* Ghost number */}
               <span className="absolute -bottom-3 right-3 font-headline font-extrabold text-9xl text-white/[0.025] select-none leading-none pointer-events-none">

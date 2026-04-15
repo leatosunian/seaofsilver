@@ -5,7 +5,7 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 
 export default function Hero() {
   return (
-    <header className="relative pt-32 pb-24 px-4 md:px-16 2xl:px-64 min-h-screen flex items-center overflow-hidden bg-surface">
+    <header className="relative pt-32 pb-24 px-6 md:px-16 2xl:px-64 min-h-screen flex items-center overflow-hidden bg-surface">
       {/* 3D Globe — full-screen, behind everything */}
       <GlobeBackground />
 
@@ -35,22 +35,23 @@ export default function Hero() {
       <div className="max-w-400 mx-auto w-full relative z-10">
         <div className="max-w-6xl">
           {/* Status */}
-          <div className="flex items-center gap-4 mb-10 ">
-            <div className="h-px w-8 bg-primary"></div>
-            <span className="text-primary font-label text-[10px] uppercase tracking-[0.6em] font-black">
+          <div className="flex items-center gap-3 mb-8 md:mb-10">
+            <div className="h-px w-2 bg-primary"></div>
+            <span className="text-primary font-label text-[10px] uppercase tracking-[0.2em] font-black">
               SEA OF SILVER | SOFTWARE FACTORY
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="font-headline font-extrabold text-7xl md:text-[5rem] tracking-tighter leading-[0.8] mb-12 uppercase text-white">
+          <h1 className="font-headline font-extrabold text-4xl sm:text-6xl md:text-[5rem] tracking-tighter leading-[0.9] md:leading-[0.8] mb-8 uppercase text-white">
             Soluciones que  <br />
             <span className="text-gradient">transforman tu negocio</span>
           </h1>
+          <div className="h-px w-24 bg-primary mb-8 md:mb-12" />
 
           {/* Sub */}
-          <div className="mb-16">
-            <p className="text-zinc-300 text-lg md:text-xl font-light leading-relaxed">
+          <div className="mb-10 md:mb-16">
+            <p className="text-zinc-300 text-base md:text-lg lg:text-xl font-light leading-relaxed">
               Software a medida, aplicaciones móviles, IA, marketing digital
               y ciberseguridad. Todo lo que tu empresa necesita para
               escalar, en un solo lugar.
@@ -59,7 +60,7 @@ export default function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-8 items-center">
+          <div className="flex flex-wrap gap-4 sm:gap-8 items-center">
             <InteractiveHoverButton className="group  text-black hover:bg-primary/75 bg-primary rounded-sm font-medium text-base">
               Contanos tu proyecto
               {/* <FaArrowRight className="ml-2 transition-transform duration-200 group-hover:translate-x-1" /> */}
@@ -72,7 +73,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-12 flex items-center gap-4 overflow-hidden">
+      <div className="absolute bottom-12 left-6 md:left-12 flex items-center gap-4 overflow-hidden">
         <div className="h-16 w-px bg-white/10 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1/2 bg-primary scanline"></div>
         </div>

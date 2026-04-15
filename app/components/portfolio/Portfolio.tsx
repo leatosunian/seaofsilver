@@ -29,45 +29,38 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section className="py-40 px-12 bg-surface border-y border-white/5">
+    <section className="py-20 md:py-40 px-6 md:px-12 bg-surface border-y border-white/5">
       <div className="max-w-[1600px] mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-8">
-          <div>
-            <span className="text-primary font-label text-[10px] uppercase tracking-[0.4em] font-extrabold mb-4 block">
-              CASE STUDIES
-            </span>
-            <h2 className="font-headline font-extrabold text-5xl md:text-7xl tracking-tighter uppercase text-white">
-              trabajos relevantes
-            </h2>
-          </div>
-          <button className="text-white text-[10px] font-bold uppercase tracking-[0.3em] flex items-center gap-3 hover:text-primary transition-colors group">
-            Full Portfolio{" "}
-            <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
-              north_east
-            </span>
-          </button>
+        <div className="mb-16 md:mb-32 md:text-center">
+          <span className="text-primary font-label text-[10px] uppercase tracking-[0.4em] font-extrabold mb-4 block">
+            CASE STUDIES
+          </span>
+          <h2 className="font-headline font-extrabold text-3xl md:text-5xl 2xl:text-6xl tracking-tighter uppercase text-white mb-8">
+            trabajos relevantes
+          </h2>
+          <div className="h-px w-24 bg-primary mx-0 md:mx-auto" />
         </div>
 
-        <div className="space-y-48">
+        <div className="space-y-20 md:space-y-48">
           {projects.map(({ num, category, title, description, tags, image, imageAlt, reverse }) => (
             <div
               key={num}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-center"
             >
               {/* Text */}
               <div
-                className={`lg:col-span-5 ${reverse ? "lg:order-2" : "order-2 lg:order-1"}`}
+                className={`lg:col-span-5 ${reverse ? "order-2 lg:order-2" : "order-2 lg:order-1"}`}
               >
-                <div className="flex items-center gap-4 mb-8">
+                <div className="flex items-center gap-4 mb-6 md:mb-8">
                   <span className="text-primary font-bold text-[10px] tracking-widest uppercase">
                     {num} / {category}
                   </span>
                   <div className="h-px flex-1 bg-white/5"></div>
                 </div>
-                <h3 className="font-headline font-extrabold text-4xl mb-8 uppercase tracking-tighter text-white">
+                <h3 className="font-headline font-extrabold text-2xl md:text-4xl mb-6 md:mb-8 uppercase tracking-tighter text-white">
                   {title}
                 </h3>
-                <p className="text-zinc-500 text-lg mb-10 leading-relaxed font-light">
+                <p className="text-zinc-500 text-base md:text-lg mb-6 md:mb-10 leading-relaxed font-light">
                   {description}
                 </p>
                 <div className="flex gap-4">
@@ -84,7 +77,7 @@ export default function Portfolio() {
 
               {/* Image */}
               <div
-                className={`lg:col-span-7 ${reverse ? "lg:order-1" : "order-1 lg:order-2"}`}
+                className={`lg:col-span-7 ${reverse ? "order-1 lg:order-1" : "order-1 lg:order-2"}`}
               >
                 <div className="aspect-[16/9] border border-white/5 p-1 hover:border-primary/30 transition-all duration-700">
                   <div className="w-full h-full bg-zinc-950 overflow-hidden relative group">
