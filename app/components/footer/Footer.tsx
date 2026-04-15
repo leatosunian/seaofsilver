@@ -3,7 +3,7 @@ const govLinks = ["Privacy", "Security", "Terms"];
 
 export default function Footer() {
   return (
-    <footer className="bg-black w-full py-24 px-12 border-t border-white/5">
+    <footer className="bg-surface w-full py-24 px-12 border-t border-white/5">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-16 max-w-[1600px] mx-auto">
         {/* Brand */}
         <div className="md:col-span-4">

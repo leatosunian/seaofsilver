@@ -50,11 +50,11 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { label: 'home', id: 'hero', number: '01' },
-    { label: 'projects', id: 'projects', number: '02' },
-    { label: 'techStack', id: 'tech-stack', number: '03' },
-    { label: 'certificates', id: 'certificates', number: '04' },
-    { label: 'contact', id: 'contact', number: '05' },
+    { label: 'portfolio', id: 'hero', number: '01' },
+    { label: 'nosotros', id: 'projects', number: '02' },
+    { label: 'contacto', id: 'tech-stack', number: '03' },
+    //{ label: 'certificates', id: 'certificates', number: '04' },
+    //{ label: 'contact', id: 'contact', number: '05' },
   ];
 
   const navServices = [
@@ -77,70 +77,33 @@ export default function Navbar() {
       >
         <div
           className={`max-w-7xl mx-auto transition-all duration-300 ${isScrolled
-            ? 'glass backdrop-blur-lg bg-[#0e0e10]/60 rounded-2xl px-6 py-3 border border-white/15'
+            ? 'glass backdrop-blur bg-surface/60 rounded-2xl px-6 py-3 border border-white/15'
             : 'px-6 sm:px-6 py-4 border border-transparent'
             }`}
         >
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="text-lg font-bold text-white cursor-none sm:text-xl md:flex-1">
-              <Image src={logo} width={43} height={43} alt="Logo" />
+              <Image src={logo} width={43} height={33} alt="Logo" />
             </Link>
 
             {/* Desktop nav links */}
             {!isStreamingPage && !isCeloPage && (
               <div className="items-center hidden mr-6 space-x-8 md:flex">
-                <NavigationMenu viewport={false}>
+                <NavigationMenu viewport={false} className='pb-1'>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-
-                      {/*
-                  NavigationMenuTrigger already includes the rotating ChevronDownIcon.
-                  We strip its default background/padding/size so it blends with the
-                  rest of the nav links, then re-apply our own type styles.
-                  ─── classes to know ──────────────────────────────────────────────
-                  h-auto p-0           → remove fixed height & padding from defaults
-                  bg-transparent …     → kill the muted-background states
-                  text-primary         → neon green to mark it as the active section
-                  font-label …         → match surrounding nav link typography
-                  rounded-none         → no radius (design system rule)
-                */}
-                      <NavigationMenuTrigger className="h-auto p-0 rounded-none bg-transparent hover:bg-transparent focus:bg-transparent data-open:bg-transparent data-popup-open:bg-transparent data-open:hover:bg-transparent data-popup-open:hover:bg-transparent data-open:focus:bg-transparent text-white hover:text-primary font-label text-[11px] uppercase tracking-[0.3em] font-medium shadow-none">
+                      <NavigationMenuTrigger className="h-auto p-0 rounded-none bg-transparent hover:bg-transparent focus:bg-transparent data-open:bg-transparent data-popup-open:bg-transparent data-open:hover:bg-transparent data-popup-open:hover:bg-transparent data-open:focus:bg-transparent text-zinc-300 hover:text-primary font-label text-[11px] uppercase tracking-[0.3em] font-medium shadow-none">
                         Servicios
                       </NavigationMenuTrigger>
 
-                      {/*
-                  viewport={false} on <NavigationMenu> makes the content panel render
-                  directly below the trigger (position: absolute, top-full) with a
-                  300ms animate-in/out.  We override only what needs to change:
-                  ─── classes to know ──────────────────────────────────────────────
-                  bg-[#050505]         → page background color (#050505 = bg-background)
-                  border-white/5       → barely-visible border (design system rule)
-                  rounded-xl           → matches the dropdown the user set previously
-                  shadow-[…]           → primary-tinted glow (no black shadows rule)
-                  p-0                  → we handle padding per item
-                */}
-                      <NavigationMenuContent className="bg-[#050505]/80 backdrop-blur-2xl border-none ring-1 ring-[#141415] rounded-xl shadow-[0_8px_32px_rgba(142,255,113,0.06)] p-0 min-w-64">
+                      <NavigationMenuContent style={{backgroundColor:'rgba(10, 10, 10, 0.6)', backdropFilter:'blur(10px)'}} className="bg-surface/40 glass backdrop-blur-2xl border-none ring-1 ring-[#141415] rounded-xl shadow-[0_8px_32px_rgba(142,255,113,0.06)] p-0 min-w-64">
                         {navServices.map(({ num, title, href }) => (
-                          /*
-                            NavigationMenuLink wraps each item for correct keyboard nav
-                            and active-state tracking.  asChild delegates the rendered
-                            element to next/link for client-side routing.
-                            ─── classes to know ──────────────────────────────────────
-                            hover:bg-white/4  → subtle row highlight
-                            hover:text-primary     → neon green on hover
-                            rounded-none           → sharp edges inside the panel
-                            px-5 py-3.5            → comfortable click target
-                          */
                           <NavigationMenuLink key={num} asChild>
                             <Link
                               href={href}
-                              className="flex items-center backdrop-blur-xl gap-3 px-5 py-4 rounded-none hover:bg-white/4 group/item transition-colors"
+                              className="flex items-center backdrop-blur-xl  gap-3 px-5 py-4 rounded-none hover:bg-white/4 group/item transition-colors"
                             >
-                              {/* Decorative number */}
-                              {/* <span className="text-primary/30 text-[9px] font-black italic w-5 shrink-0">
-                          {num}
-                        </span> */}
                               {/* Service name */}
                               <span className="text-zinc-400 group-hover/item:text-primary font-label text-[11px] uppercase tracking-[0.2em] font-medium transition-colors">
                                 {title}
@@ -149,19 +112,19 @@ export default function Navbar() {
                           </NavigationMenuLink>
                         ))}
                       </NavigationMenuContent>
-
                     </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu>
+
                 {navItems.map(({ label, id }) => (
                   <button
                     key={id}
                     onClick={() => scrollToSection(id)}
-                    className="relative px-3 py-2 transition-colors text-white/75 hover:text-white cursor-none group"
+                    className="relative px-3 py-2 transition-colors text-zinc-300 hover:text-primary font-label text-[11px] uppercase tracking-[0.3em] font-medium  group"
                     aria-label={`Navigate to ${label} section`}
                   >
                     {label}
-                    <span className="absolute bottom-0 w-0 h-px transition-all duration-300 -translate-x-1/2 bg-white left-1/2 group-hover:w-full" />
+                    <span className="absolute bottom-0 w-0 h-px transition-all duration-300 -translate-x-1/2 bg-primary left-1/2 group-hover:w-full" />
                   </button>
                 ))}
               </div>

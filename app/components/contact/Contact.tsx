@@ -1,6 +1,15 @@
+"use client";
+import { ShineBorder } from "@/components/ui/shine-border";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "../ui/button";
+import { FaArrowRight } from "react-icons/fa6";
+
+
 export default function Contact() {
   return (
-    <section className="py-40 px-12 bg-background">
+    <section className="py-40 px-12 bg-surface">
       <div className="max-w-400 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24">
         {/* Left */}
         <div className="lg:col-span-5">
@@ -33,55 +42,43 @@ export default function Contact() {
         </div>
 
         {/* Right */}
-        <div className="lg:col-span-7">
-          <div className="glass-card p-12 md:p-16 border border-white/5 relative">
-            <div className="absolute top-0 right-0 p-8">
-              <div className="text-[8px] text-zinc-600 font-bold uppercase tracking-widest">
-                Encrypted Transmission
-              </div>
-            </div>
-            <form className="space-y-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="group">
-                  <label className="font-label text-[10px] uppercase font-bold tracking-widest mb-4 block text-zinc-500 group-focus-within:text-primary transition-colors">
-                    Identity
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full bg-transparent border-0 border-b border-white/10 focus:ring-0 focus:border-primary transition-all py-4 px-0 text-white placeholder-zinc-800 text-sm outline-none"
-                  />
+        <Card className="relative bg-surface px-3 py-6 w-full max-w-87.5 overflow-hidden lg:col-span-7">
+          <ShineBorder shineColor={["#8eff71", "#2ff801", "#8eff71"]} />
+          <CardHeader>
+            <CardTitle className="font-headline font-extrabold tracking-tighter uppercase text-white text-2xl ">Contáctanos</CardTitle>
+            <CardDescription className="text-zinc-500">
+              Completá el formulario y te respondemos a la brevedad.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              window.open("https://api.whatsapp.com/send?phone=5492235423025", "_blank");
+            }}
+            className="h-full flex flex-col justify-between items-stretch">
+              <div className="grid gap-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="grid gap-2">
+                    <span className="text-sm text-zinc-400 font-medium">Nombre</span>
+                    <Input id="name" type="text" placeholder="Juan" />
+                  </div>
+                  <div className="grid gap-2">
+                    <span className="text-sm text-zinc-400 font-medium">Apellido</span>
+                    <Input id="surname" type="text" placeholder="García" />
+                  </div>
                 </div>
-                <div className="group">
-                  <label className="font-label text-[10px] uppercase font-bold tracking-widest mb-4 block text-zinc-500 group-focus-within:text-primary transition-colors">
-                    Protocol
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full bg-transparent border-0 border-b border-white/10 focus:ring-0 focus:border-primary transition-all py-4 px-0 text-white placeholder-zinc-800 text-sm outline-none"
-                  />
+                <div className="grid gap-2">
+                  <span className="text-sm text-zinc-400 font-medium">Mensaje</span>
+                  <Textarea id="message" placeholder="Contanos sobre tu proyecto..." className="min-h-32 resize-none" />
                 </div>
               </div>
-              <div className="group">
-                <label className="font-label text-[10px] uppercase font-bold tracking-widest mb-4 block text-zinc-500 group-focus-within:text-primary transition-colors">
-                  Mission Parameters
-                </label>
-                <textarea
-                  rows={4}
-                  placeholder="Describe the operational void..."
-                  className="w-full bg-transparent border-0 border-b border-white/10 focus:ring-0 focus:border-primary transition-all py-4 px-0 text-white placeholder-zinc-800 text-sm resize-none outline-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-white text-black font-headline font-bold py-6 uppercase text-xs tracking-[0.4em] hover:bg-primary transition-all duration-500"
-              >
-                Send Transmission
-              </button>
+              <Button type="submit" className="group p-5.5 mt-10 hover:bg-primary/75 bg-primary rounded-sm font-medium text-base">
+                Enviar mensaje
+                <FaArrowRight className="ml-2 transition-transform duration-200 group-hover:translate-x-1" />
+              </Button>
             </form>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

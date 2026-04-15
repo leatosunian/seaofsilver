@@ -23,7 +23,7 @@ const pillars = [
 
 export default function WhyUs() {
   return (
-    <section className="py-40 px-12 bg-background">
+    <section className="py-40 px-12 bg-surface">
       <div className="max-w-400 mx-auto">
         <div className="mb-24 flex items-end justify-between">
           <div>

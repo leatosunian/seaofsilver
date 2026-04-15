@@ -7,7 +7,7 @@ const metrics = [
 
 export default function Metrics() {
   return (
-    <section className="py-32 px-12 border-y border-white/5 bg-zinc-950/80 relative overflow-hidden">
+    <section className="py-32 px-12 border-y border-white/5 bg-surface relative overflow-hidden">
       <div className="absolute inset-0 dashboard-grid opacity-5"></div>
       <div className="max-w-400 mx-auto">
         <div className="text-center mb-24">

@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
-    <header className="relative pt-32 pb-24 px-4 md:px-16 2xl:px-64 min-h-screen flex items-center overflow-hidden bg-background">
+    <header className="relative pt-32 pb-24 px-4 md:px-16 2xl:px-64 min-h-screen flex items-center overflow-hidden bg-surface">
       {/* 3D Globe — full-screen, behind everything */}
       <GlobeBackground />
 

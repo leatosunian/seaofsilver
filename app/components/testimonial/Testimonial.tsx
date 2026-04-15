@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Testimonial() {
   return (
-    <section className="py-40 px-12 bg-background">
+    <section className="py-40 px-12 bg-surface">
       <div className="mb-32 text-center">
         <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-6 block">
           CLIENTES QUE CONFÍAN
