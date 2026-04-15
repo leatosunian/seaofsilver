@@ -77,7 +77,7 @@ export default function Navbar() {
       >
         <div
           className={`max-w-7xl mx-auto transition-all duration-300 ${isScrolled
-            ? 'glass backdrop-blur bg-surface/60 rounded-2xl px-6 py-3 border border-white/15'
+            ? 'glass backdrop-blur bg-surface/60 rounded-md px-6 py-3 border border-white/15'
             : 'px-6 sm:px-6 py-4 border border-transparent'
             }`}
         >

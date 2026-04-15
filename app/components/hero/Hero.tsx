@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { GlobeBackground } from "../globe";
 import { Button } from "../ui/button";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 export default function Hero() {
   return (
@@ -35,9 +36,9 @@ export default function Hero() {
         <div className="max-w-6xl">
           {/* Status */}
           <div className="flex items-center gap-4 mb-10 ">
-            <div className="h-px w-12 bg-primary"></div>
+            <div className="h-px w-8 bg-primary"></div>
             <span className="text-primary font-label text-[10px] uppercase tracking-[0.6em] font-black">
-              TECH_STATUS: OPERACIONAL / LISTOS_PARA_VOS
+              SEA OF SILVER | SOFTWARE FACTORY
             </span>
           </div>
 
@@ -59,10 +60,10 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-8 items-center">
-            <Button className="group p-5.5 hover:bg-primary/75 bg-primary rounded-sm font-medium text-base">
+            <InteractiveHoverButton className="group  text-black hover:bg-primary/75 bg-primary rounded-sm font-medium text-base">
               Contanos tu proyecto
-              <FaArrowRight className="ml-2 transition-transform duration-200 group-hover:translate-x-1" />
-            </Button>
+              {/* <FaArrowRight className="ml-2 transition-transform duration-200 group-hover:translate-x-1" /> */}
+            </InteractiveHoverButton>
             <Button className="p-5.5 hover:bg-primary/75 hover:text-black text-white border-none bg-primary/10 backdrop-blur-2xl rounded-sm font-medium text-base">
               Nuestros servicios
             </Button>
