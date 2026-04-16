@@ -23,7 +23,7 @@ const pillars = [
 
 export default function WhyUs() {
   return (
-    <section className="py-20 md:py-40 px-6 md:px-12 bg-surface">
+    <section id="whyus" className="py-20 md:py-40 px-6 md:px-12 bg-surface">
       <div className="max-w-400 mx-auto">
         <div className="mb-12 md:mb-24 flex items-end justify-between">
           <div>
@@ -37,25 +37,20 @@ export default function WhyUs() {
           </div>
           <p className="max-w-sm xl:max-w-lg hidden md:block border-l-2 border-primary/30 pl-5 leading-relaxed">
             <span className="block text-zinc-200 font-light text-base xl:text-lg mb-1">
-              El mejor software no es el más sofisticado.
+              El mejor software del mercado.
             </span>
             <span className="block text-zinc-500 font-light text-sm xl:text-base">
-              Es el que resuelve el problema correcto de la manera más directa posible.
+              Resolviendo el problema de manera eficiente y efectiva.
             </span>
           </p>
         </div>
 
         <div className="grid grid-cols-1 rounded-md md:grid-cols-4 gap-px bg-white/5 border border-white/5 overflow-hidden">
-          {pillars.map(({ icon, title, body }, i) => (
+          {pillars.map(({ icon, title, body }) => (
             <div
               key={title}
               className="relative p-6 md:p-10 bg-background group hover:bg-zinc-900/60 transition-all duration-300 shadow-[inset_0_2px_0_0_rgba(142,255,113,0)] hover:shadow-[inset_0_2px_0_0_rgba(142,255,113,0.35)] flex flex-col overflow-hidden"
             >
-              {/* Ghost number */}
-              <span className="absolute -bottom-3 right-3 font-headline font-extrabold text-9xl text-white/[0.025] select-none leading-none pointer-events-none">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-
               {/* Icon badge */}
               <div className="w-9 h-9 flex items-center justify-center bg-primary/[0.08] rounded mb-7 group-hover:bg-primary/[0.15] transition-colors duration-300">
                 <span className="material-symbols-outlined text-primary text-[18px]">

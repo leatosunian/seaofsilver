@@ -33,13 +33,13 @@ export default function RootLayout({
       <head>
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
         />
       </head>
       <body className="bg-background text-white font-body antialiased" suppressHydrationWarning>
         {children}
         <a
-          href="https://wa.me/1234567890"
+          href="https://wa.me/5492235809709"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contact us on WhatsApp"

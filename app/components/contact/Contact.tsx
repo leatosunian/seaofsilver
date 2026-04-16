@@ -14,7 +14,7 @@ const labelClass = "text-[10px] font-extrabold uppercase tracking-widest text-zi
 
 export default function Contact() {
   return (
-    <section className="py-20 md:py-40 px-6 md:px-12 bg-surface">
+    <section id="contact" className="py-20 md:py-40 px-6 md:px-12 bg-surface">
       <div className="max-w-400 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
         {/* Left — 7/12 ≈ 3/5 */}
         <div className="lg:col-span-7">
@@ -32,7 +32,7 @@ export default function Contact() {
           <div className="space-y-3 max-w-sm">
             {/* Email */}
             <Link
-              href="mailto:hello@sos-tech.io"
+              href="mailto:silverofseaofficial@gmail.com"
               className="flex items-center gap-4 p-3.5 rounded-lg bg-zinc-900/60 border border-zinc-800/60 hover:border-zinc-700 hover:bg-zinc-900 transition-all duration-200 group"
             >
               <div className="w-10 h-10 rounded-lg bg-linear-to-br from-indigo-500/25 to-violet-500/10 border border-indigo-500/20 flex items-center justify-center shrink-0">
@@ -40,12 +40,29 @@ export default function Contact() {
               </div>
               <div className="flex-1 min-w-0">
                 <span className="text-[10px] font-extrabold uppercase tracking-widest text-zinc-600 block mb-0.5">Correo electrónico</span>
-                <span className="text-sm font-bold text-zinc-200 group-hover:text-white transition-colors duration-200 block">hello@sos-tech.io</span>
+                <span className="text-sm font-bold text-zinc-200 group-hover:text-white transition-colors duration-200 block">seaofsilver@gmail.com</span>
               </div>
               <FaArrowRight className="text-zinc-700 text-xs group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-200 shrink-0" />
             </Link>
 
             {/* WhatsApp 1 */}
+            <Link
+              href="https://api.whatsapp.com/send?phone=5492235809709"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-3.5 rounded-lg bg-zinc-900/60 border border-zinc-800/60 hover:border-zinc-700 hover:bg-zinc-900 transition-all duration-200 group"
+            >
+              <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/20 to-emerald-500/10 border border-primary/20 flex items-center justify-center shrink-0">
+                <FaWhatsapp className="text-primary text-[17px]" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-zinc-600 block mb-0.5">WhatsApp</span>
+                <span className="text-sm font-bold text-zinc-200 group-hover:text-white transition-colors duration-200 block">+54 9 223 5809709</span>
+              </div>
+              <FaArrowRight className="text-zinc-700 text-xs group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-200 shrink-0" />
+            </Link>
+
+            {/* WhatsApp 2 */}
             <Link
               href="https://api.whatsapp.com/send?phone=5492235423025"
               target="_blank"
@@ -57,7 +74,7 @@ export default function Contact() {
               </div>
               <div className="flex-1 min-w-0">
                 <span className="text-[10px] font-extrabold uppercase tracking-widest text-zinc-600 block mb-0.5">WhatsApp</span>
-                <span className="text-sm font-bold text-zinc-200 group-hover:text-white transition-colors duration-200 block">+54 9 223 542-3025</span>
+                <span className="text-sm font-bold text-zinc-200 group-hover:text-white transition-colors duration-200 block">+54 9 223 5423025</span>
               </div>
               <FaArrowRight className="text-zinc-700 text-xs group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-200 shrink-0" />
             </Link>

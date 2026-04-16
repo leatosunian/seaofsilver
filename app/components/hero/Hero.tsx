@@ -1,9 +1,12 @@
-import { FaArrowRight } from "react-icons/fa6";
+'use client';
+
 import { GlobeBackground } from "../globe";
 import { Button } from "../ui/button";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 
 export default function Hero() {
+  const smoothScroll = useSmoothScroll();
   return (
     <header className="relative pt-32 pb-24 px-6 md:px-16 2xl:px-64 min-h-screen flex items-center overflow-hidden bg-surface">
       {/* 3D Globe — full-screen, behind everything */}
@@ -61,11 +64,13 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 sm:gap-8 items-center">
-            <InteractiveHoverButton className="group  text-black hover:bg-primary/75 bg-primary rounded-sm font-medium text-base">
+            <InteractiveHoverButton onClick={() => smoothScroll('contact')} className="group  text-black hover:bg-primary/75 bg-primary rounded-sm font-medium text-base">
               Contanos tu proyecto
-              {/* <FaArrowRight className="ml-2 transition-transform duration-200 group-hover:translate-x-1" /> */}
             </InteractiveHoverButton>
-            <Button className="p-5.5 hover:bg-primary/75 hover:text-black text-white border-none bg-primary/10 backdrop-blur-2xl rounded-sm font-medium text-base">
+            <Button
+              onClick={() => smoothScroll('services')}
+              className="p-5.5 hover:bg-primary/75 hover:text-black text-white border-none bg-primary/10 backdrop-blur-2xl rounded-sm font-medium text-base cursor-pointer"
+            >
               Nuestros servicios
             </Button>
           </div>

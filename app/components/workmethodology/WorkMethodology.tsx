@@ -27,7 +27,7 @@ const steps = [
 
 export default function WorkMethodology() {
   return (
-    <section className="py-20 md:py-40 px-6 md:px-12 bg-surface relative overflow-hidden">
+    <section id="metodologias" className="py-20 md:py-40 px-6 md:px-12 bg-surface relative overflow-hidden">
       <div className="absolute inset-0 dashboard-grid opacity-10"></div>
       <div className="max-w-400 mx-auto relative z-10">
         <div className="mb-16 md:mb-32 md:text-center">

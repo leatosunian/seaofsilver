@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useMemo, useEffect, useState } from "react";
+import { useRef, useMemo, useEffect, useSyncExternalStore } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { useGlobeNodes, type GlobeNode } from "./hooks/useGlobeNodes";
@@ -8,16 +8,26 @@ import { useGlobeLines, type GlobeLine } from "./hooks/useGlobeLines";
 import { useWorldOutline } from "./hooks/useWorldOutline";
 
 // ─── Reduced-motion ───────────────────────────────────────────────────────────
+function subscribeToMotionPref(cb: () => void) {
+  const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+  mq.addEventListener("change", cb);
+  return () => mq.removeEventListener("change", cb);
+}
+
+function getMotionPrefSnapshot() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function getMotionPrefServerSnapshot() {
+  return false;
+}
+
 function useReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(mq.matches);
-    const h = (e: MediaQueryListEvent) => setReduced(e.matches);
-    mq.addEventListener("change", h);
-    return () => mq.removeEventListener("change", h);
-  }, []);
-  return reduced;
+  return useSyncExternalStore(
+    subscribeToMotionPref,
+    getMotionPrefSnapshot,
+    getMotionPrefServerSnapshot,
+  );
 }
 
 // ─── Radial-gradient sprite texture for soft node glow ───────────────────────
@@ -60,23 +70,31 @@ const ATMO_FRAG = /* glsl */ `
 
 // ─── Camera controller ────────────────────────────────────────────────────────
 function CameraController({ reduced }: { reduced: boolean }) {
+  const cameraRef = useRef<THREE.Camera>(null);
   const { camera } = useThree();
 
   useEffect(() => {
-    camera.position.set(0, 0, 6.5);
-    if (camera instanceof THREE.PerspectiveCamera) {
-      camera.fov = 55;
-      camera.updateProjectionMatrix();
-    }
+    cameraRef.current = camera;
   }, [camera]);
 
+  useEffect(() => {
+    const cam = cameraRef.current;
+    if (!cam) return;
+    cam.position.set(0, 0, 6.5);
+    if (cam instanceof THREE.PerspectiveCamera) {
+      cam.fov = 55;
+      cam.updateProjectionMatrix();
+    }
+  }, []);
+
   useFrame(({ clock }) => {
-    if (reduced) return;
+    const cam = cameraRef.current;
+    if (reduced || !cam) return;
     const t = clock.elapsedTime;
-    camera.position.x = Math.sin(t * 0.3) * 0.25;
-    camera.position.y = Math.cos(t * 0.2) * 0.25;
-    camera.position.z = 6.5;
-    camera.lookAt(0, 0, 0);
+    cam.position.x = Math.sin(t * 0.3) * 0.25;
+    cam.position.y = Math.cos(t * 0.2) * 0.25;
+    cam.position.z = 6.5;
+    cam.lookAt(0, 0, 0);
   });
 
   return null;
