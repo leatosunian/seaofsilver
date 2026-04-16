@@ -29,7 +29,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section className="py-20 md:py-40 px-6 md:px-12 bg-surface border-y border-white/5">
+    <section id="portafolio" className="py-20 md:py-40 px-6 md:px-12 bg-surface border-y border-white/5">
       <div className="max-w-[1600px] mx-auto">
         <div className="mb-16 md:mb-32 md:text-center">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.4em] font-extrabold mb-4 block">
@@ -85,6 +85,7 @@ export default function Portfolio() {
                       src={image}
                       alt={imageAlt}
                       fill
+                      sizes="(max-width: 768px) 100vw, 58vw"
                       className="object-cover grayscale opacity-40 group-hover:opacity-100 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-1000"
                     />
                   </div>

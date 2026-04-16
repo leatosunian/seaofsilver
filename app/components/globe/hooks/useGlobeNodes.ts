@@ -12,10 +12,10 @@ export interface GlobeNode {
 export function useGlobeNodes(count = 70, radius = 2.8): GlobeNode[] {
   return useMemo(() => {
     // Seeded PRNG for deterministic layout across renders
-    let seed = 12345;
+    const state = { seed: 12345 };
     const rand = (): number => {
-      seed = (seed * 16807) % 2147483647;
-      return seed / 2147483647;
+      state.seed = (state.seed * 16807) % 2147483647;
+      return state.seed / 2147483647;
     };
 
     return Array.from({ length: count }, (_, i) => {

@@ -1,11 +1,25 @@
+'use client';
+
 import logo from "@/public/logo_w.png";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa6";
 
 const navLinks = ["Servicios", "Portfolio", "Nosotros", "Contacto"];
 const govLinks = ["Política de Privacidad", "Términos de Uso", "Aviso Legal", "Seguridad"];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLogoClick = () => {
+    if (pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      router.push('/');
+    }
+  };
+
   return (
     <footer className="relative bg-background w-full overflow-hidden">
       {/* Subtle technical grid — same pattern as Hero */}
@@ -22,14 +36,16 @@ export default function Footer() {
 
             {/* Brand */}
             <div className="md:col-span-4 flex flex-col">
-              <Image src={logo} alt="Sea of Silver logo" className="w-28 mb-6" />
+              <button onClick={handleLogoClick} aria-label="Go to homepage" className="w-fit">
+                <Image src={logo} alt="Sea of Silver logo" className="w-28 h-auto mb-6 cursor-pointer" />
+              </button>
               <p className="text-zinc-600 font-label text-[11px] tracking-[0.18em] uppercase leading-relaxed mb-10 max-w-xs">
                 Soluciones digitales que transforman negocios. Código que escala.
               </p>
               {/* Social icons — badge style matching WhyUs/Services */}
               <div className="flex gap-2.5">
                 <a
-                  href="mailto:hello@sos-tech.io"
+                  href="mailto:silverofseaofficial@gmail.com"
                   className="w-9 h-9 flex items-center justify-center bg-white/3 border border-white/5 rounded hover:bg-primary/10 hover:border-primary/20 transition-all duration-300 group"
                   aria-label="Email"
                 >

@@ -50,18 +50,20 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { label: 'portfolio', id: 'portfolio', number: '01' },
     { label: 'nosotros', id: 'whyus', number: '02' },
+    { label: 'metodologias', id: 'metodologias', number: '00' },
+    { label: 'portafolio', id: 'portafolio', number: '01' },
     { label: 'contacto', id: 'contact', number: '03' },
   ];
 
   const navServices = [
-    { num: "01", title: "Software a Medida", href: "#services" },
-    { num: "02", title: "Web · iOS · Android", href: "#services" },
-    { num: "03", title: "Diseño de Producto", href: "#services" },
-    { num: "04", title: "Testing & QA", href: "#services" },
-    { num: "05", title: "Ciberseguridad", href: "#services" },
-    { num: "06", title: "IA y Automatizaciones", href: "#services" },
+    { num: "01", title: "Software a Medida", href: "/custom-software" },
+    { num: "02", title: "Landing Page", href: "/landing-page" },
+    { num: "03", title: "Aplicación móvil", href: "/mobile-app" },
+    { num: "04", title: "Diseño de Producto", href: "/product-design" },
+    { num: "05", title: "Testing & QA", href: "/testing-qa" },
+    { num: "06", title: "Ciberseguridad", href: "/cybersecurity" },
+    { num: "07", title: "IA y Automatizaciones", href: "/ai-automation" },
   ];
 
   return (
@@ -81,17 +83,27 @@ export default function Navbar() {
         >
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="text-lg font-bold text-white cursor-none sm:text-xl md:flex-1">
+            <button
+              onClick={() => {
+                if (pathname === '/') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                  router.push('/');
+                }
+              }}
+              className="text-lg font-bold text-white cursor-pointer sm:text-xl md:flex-1 text-left"
+              aria-label="Go to homepage"
+            >
               <Image src={logo} width={43} height={33} alt="Logo" />
-            </Link>
+            </button>
 
             {/* Desktop nav links */}
             {!isStreamingPage && !isCeloPage && (
               <div className="items-center hidden mr-6 space-x-8 md:flex">
-                <NavigationMenu viewport={false} className='pb-1'>
+                <NavigationMenu viewport={false} delayDuration={0} className='pb-1'>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <NavigationMenuTrigger className="h-auto p-0 rounded-none bg-transparent hover:bg-transparent focus:bg-transparent data-open:bg-transparent data-popup-open:bg-transparent data-open:hover:bg-transparent data-popup-open:hover:bg-transparent data-open:focus:bg-transparent text-zinc-300 hover:text-primary font-label text-[11px] uppercase tracking-[0.3em] font-medium shadow-none">
+                      <NavigationMenuTrigger className="cursor-pointer h-auto p-0 rounded-none bg-transparent hover:bg-transparent focus:bg-transparent data-open:bg-transparent data-popup-open:bg-transparent data-open:hover:bg-transparent data-popup-open:hover:bg-transparent data-open:focus:bg-transparent text-zinc-300 hover:text-primary font-label text-[11px] uppercase tracking-[0.3em] font-medium shadow-none">
                         Servicios
                       </NavigationMenuTrigger>
 
@@ -100,7 +112,7 @@ export default function Navbar() {
                           <NavigationMenuLink key={num} asChild>
                             <Link
                               href={href}
-                              className="flex items-center backdrop-blur-xl  gap-3 px-5 py-4 rounded-none hover:bg-white/4 group/item transition-colors"
+                              className="flex items-center backdrop-blur-xl gap-3 px-5 py-4 rounded-none hover:bg-white/4 group/item transition-colors cursor-pointer"
                             >
                               {/* Service name */}
                               <span className="text-zinc-400 group-hover/item:text-primary font-label text-[11px] uppercase tracking-[0.2em] font-medium transition-colors">
@@ -118,7 +130,7 @@ export default function Navbar() {
                   <button
                     key={id}
                     onClick={() => scrollToSection(id)}
-                    className="relative px-3 py-2 transition-colors text-zinc-300 hover:text-primary font-label text-[11px] uppercase tracking-[0.3em] font-medium  group"
+                    className="relative px-3 py-2 transition-colors text-zinc-300 hover:text-primary font-label text-[11px] uppercase tracking-[0.3em] font-medium group cursor-pointer"
                     aria-label={`Navigate to ${label} section`}
                   >
                     {label}
@@ -146,7 +158,7 @@ export default function Navbar() {
               {!isStreamingPage && !isCeloPage && (
                 <button
                   onClick={() => setIsMobileMenuOpen(true)}
-                  className="text-white transition-colors rounded-lg hover:text-white/80 glass cursor-none"
+                  className="text-white transition-colors rounded-lg hover:text-white/80 glass cursor-pointer"
                   aria-label="Open mobile menu"
                   aria-expanded={isMobileMenuOpen}
                 >
@@ -194,7 +206,7 @@ export default function Navbar() {
             border border-white/10 bg-white/5
             hover:bg-white/10 hover:border-white/20
             text-white/60 hover:text-white
-            transition-all duration-300 cursor-none
+            transition-all duration-300 cursor-pointer
             ${isMobileMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
           aria-label="Close mobile menu"
         >

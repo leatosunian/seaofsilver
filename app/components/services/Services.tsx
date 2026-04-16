@@ -1,39 +1,47 @@
+import Link from "next/link";
+
 const services = [
   {
     icon: "code",
     title: "SOFTWARE A MEDIDA",
+    href: "/custom-software",
     body: "Software escalable diseñado alrededor de tus procesos, tu equipo y tus clientes. El resultado es un sistema que realmente se usa.",
   },
   {
     icon: "devices",
     title: "iOS · ANDROID",
+    href: "/mobile-app",
     body: "Apps iOS y Android. Todo construido con el stack correcto, optimizado para velocidad y escalabilidad.",
   },
   {
     icon: "web",
     title: "LANDING PAGES",
+    href: "/landing-page",
     body: "Páginas optimizadas para convertir visitantes en clientes, diseñadas para maximizar la tasa de conversión.",
   },
   {
     icon: "verified",
     title: "TESTING & QA",
+    href: "/testing-qa",
     body: "Garantizamos el funcionamiento óptimo de tus sistemas con pruebas rigurosas que aseguran calidad, rendimiento y seguridad.",
   },
   {
     icon: "security",
     title: "CIBERSEGURIDAD",
+    href: "/cybersecurity",
     body: "Auditamos tu infraestructura, tus APIs y tu código para detectar puntos débiles antes de que se conviertan en incidentes.",
   },
   {
     icon: "psychology",
     title: "IA Y AUTOMATIZACIONES",
+    href: "/ai-automation",
     body: "Cada hora que tu equipo dedica a tareas repetitivas es una hora que no dedica a crecer. La automatizamos.",
   },
 ];
 
 export default function Services() {
   return (
-    <section className="py-20 md:py-40 px-6 md:px-12 bg-surface">
+    <section id="services" className="py-20 md:py-40 px-6 md:px-12 bg-surface">
       <div className="max-w-400 mx-auto">
         <div className="mb-12 md:mb-20 text-left md:text-center">
           <span className="text-primary font-label text-[10px] uppercase tracking-[0.5em] font-extrabold mb-6 block">
@@ -45,10 +53,11 @@ export default function Services() {
           <div className="h-px w-24 bg-primary mx-0 md:mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px rounded-md bg-white/5 border border-white/5 overflow-hidden">
-          {services.map(({ icon, title, body }) => (
-            <div
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px rounded-md bg-white/5 border border-white/5">
+          {services.map(({ icon, title, body, href }) => (
+            <Link
               key={title}
+              href={href}
               className="group relative overflow-hidden bg-surface p-7 md:p-12 hover:-translate-y-1 hover:bg-[#111] transition-all duration-500 cursor-pointer flex flex-col"
             >
               {/* Animated top accent line */}
@@ -88,7 +97,7 @@ export default function Services() {
                   arrow_forward
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
